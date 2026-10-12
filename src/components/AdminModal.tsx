@@ -170,7 +170,7 @@ export default function AdminModal() {
                     type="email"
                     value={loginEmail}
                     onChange={(e) => setLoginEmail(e.target.value)}
-                    placeholder={creds.email}
+                    placeholder="Enter email address"
                     required
                     className="w-full rounded-lg border border-white/15 bg-black/50 px-3 py-2.5 text-sm text-bone focus:border-crimson-2 focus:outline-none"
                   />
@@ -194,23 +194,6 @@ export default function AdminModal() {
                 >
                   Sign In
                 </button>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setLoginEmail(creds.email);
-                    setLoginPass(creds.pass);
-                    login(creds.email, creds.pass);
-                  }}
-                  className="w-full rounded-lg border border-white/15 bg-white/5 py-2 text-xs font-semibold text-bone transition hover:border-crimson-2/50 hover:bg-crimson/10 hover:text-crimson-2"
-                >
-                  ⚡ One-Click Instant Login
-                </button>
-              </div>
-
-              <div className="mt-4 rounded-md border border-white/5 bg-white/[0.02] p-2.5 text-center text-[11px] text-smoke">
-                Default Email: <button type="button" onClick={() => setLoginEmail(creds.email)} className="font-mono text-bone underline hover:text-crimson-2">{creds.email}</button>
-                <br />
-                Default Pass: <button type="button" onClick={() => setLoginPass(creds.pass)} className="font-mono text-bone underline hover:text-crimson-2">{creds.pass}</button>
               </div>
             </form>
           </div>
